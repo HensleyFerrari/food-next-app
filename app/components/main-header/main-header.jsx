@@ -2,9 +2,12 @@ import Link from 'next/link';
 import classes from './main-header.module.css'
 import LogoImg from '@/assets/logo.png'
 import Image from 'next/image';
+import MainHeaderBackground from './main-header-background';
 
 function MainHeader() {
   return (
+    <>
+    <MainHeaderBackground />
     <header className={classes.header}>
         <Link className={classes.logo} href="/">
             <Image src={LogoImg} alt="A plate with food on it" priority />
@@ -22,6 +25,7 @@ function MainHeader() {
             </ul>
         </nav>
     </header>
+    </>
   )
 }
 
